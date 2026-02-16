@@ -1,0 +1,227 @@
+:root {
+  --bg: #f5f4ef;
+  --text: #1a1a1a;
+  --muted: #9a978f;
+  --accent: #b65a3a;
+
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2.5rem;
+  --space-lg: 6rem;
+  --space-xl: 10rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* =========================
+   FIRST PAGE (CONTENT)
+========================= */
+
+.container {
+  width: 100%;
+  max-width: 880px;
+  margin: 0 auto;
+
+  padding: var(--space-xl) 2rem;
+  min-height: 100svh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-lg);
+}
+
+/* =========================
+   HERO
+========================= */
+
+.logo {
+  font-size: clamp(3.8rem, 7vw, 7rem);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 0.9;
+  margin: 0;
+}
+
+.accent {
+  color: var(--accent);
+}
+
+.lead {
+  max-width: 520px;
+  margin-top: var(--space-md);
+
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+.meta {
+  margin-top: var(--space-sm);
+
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.content section {
+  max-width: 560px;
+}
+
+.content h2 {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 var(--space-sm) 0;
+}
+
+.content p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+/* =========================
+   WORK
+========================= */
+
+.work {
+  display: flex;
+  flex-direction: column;
+}
+
+.project {
+  padding: var(--space-md) 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.project-title {
+  font-size: 1.15rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--text);
+  letter-spacing: -0.01em;
+  transition: opacity 0.25s ease;
+}
+
+.project-title:hover {
+  opacity: 0.6;
+}
+
+.project-description {
+  margin-top: var(--space-sm);
+  font-size: 0.95rem;
+  line-height: 1.9;
+  color: #333;
+  max-width: 520px;
+}
+
+/* Tech stack becomes quiet text */
+
+.project-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin-top: var(--space-sm);
+  padding: 0;
+  list-style: none;
+}
+
+.project-stack li {
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* =========================
+   SECOND PAGE (FOOTER)
+========================= */
+
+footer {
+  min-height: 100svh;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+
+  display: flex;
+  align-items: center;
+
+  padding: var(--space-xl) 2rem;
+}
+
+.footer-inner {
+  width: 100%;
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+footer h2 {
+  font-size: clamp(2.8rem, 6vw, 5.5rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 0.95;
+
+  margin: 0 0 var(--space-lg) 0;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.footer-link {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  color: var(--text);
+  transition: opacity 0.25s ease;
+}
+
+.footer-link:hover {
+  opacity: 0.6;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .container {
+    padding: var(--space-lg) 1.5rem;
+    gap: var(--space-lg);
+  }
+
+  footer {
+    padding: var(--space-lg) 1.5rem;
+  }
+}
