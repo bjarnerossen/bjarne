@@ -34,7 +34,7 @@ body {
   margin: 0 auto;
   padding: var(--space-xl) 3rem;
 
-  min-height: calc(100vh - 4rem);
+  min-height: 100vh;
 
   display: flex;
   flex-direction: column;
@@ -184,8 +184,8 @@ footer {
 
   padding: var(--space-xl) 2rem;
 
-  border-top-left-radius: 32px;
-  border-top-right-radius: 32px;
+  /* border-top-left-radius: 32px;
+  border-top-right-radius: 32px; */
 }
 
 .footer-inner {
@@ -194,11 +194,12 @@ footer {
 }
 
 footer h2 {
-  font-size: clamp(3.5rem, 9vw, 7rem);
+  font-size: clamp(3rem, 8vw, 6rem);
   font-weight: 900;
   line-height: 0.88;
   margin: 0 0 var(--space-lg) 0;
 }
+
 .footer-links {
   display: flex;
   flex-direction: column;
@@ -226,14 +227,18 @@ footer h2 {
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 100%;
+  width: 0; /* start hidden */
   height: 2px;
   background: var(--accent);
+  transition: width 0.25s ease; /* animate the underline */
 }
 
-/* Subtle interaction */
+.footer-link:hover::after {
+  width: 100%; /* expand on hover */
+}
+
 .footer-link:hover {
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 /* =========================
